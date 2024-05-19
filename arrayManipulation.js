@@ -1,7 +1,6 @@
 var numbers = [1, 2, 3, 4, 5, 6];
 var newArray = [];
 
-
 function processArray(numbers){
   for(var i = 0; i < numbers.length; i++){
     if(numbers[i]%2 != 0){
@@ -13,20 +12,27 @@ function processArray(numbers){
   return newArray;
 }
 
-var words = ["Chair", "Book", "Hello", "Kitten", "Ball", "mouse"]
+var names = ["Lisa", "Kofi", "Ama", "James", "Fred", "Sadie"];
+var newNames = [];
 
-function formatArrayStrings(words, numbers){
+function formatArrayStrings(names, numbers){
   for(var i = 0; i < numbers.length; i++){
     if(numbers[i]%2 != 0){
-      words[i] = words[i].toLowerCase();
+      newNames.push(names[i].toLowerCase());
     }else {
-    words[i] = words[i].toUpperCase();
+      newNames.push(names[i].toUpperCase());
     }
   }
-  return words;
+  return newNames;
 }
+
+module.exports = {
+  processArray,
+  formatArrayStrings
+};
+
 
 console.log(numbers);
 console.log(processArray(numbers));
-console.log(words);
-console.log(formatArrayStrings(words, numbers));
+console.log(names);
+console.log(formatArrayStrings(names, numbers));
