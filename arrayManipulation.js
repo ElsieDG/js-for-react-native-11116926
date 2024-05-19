@@ -13,6 +13,20 @@ function processArray(numbers){
   return newArray;
 }
 
-function formatArrayStrings()
+var words = ["Chair", "Book", "Hello", "Kitten", "Ball", "mouse"]
 
-console.log(arrayManipulation(numbers));
+function formatArrayStrings(words, numbers){
+  for(var i = 0; i < numbers.length; i++){
+    if(numbers[i]%2 != 0){
+      words[i] = words[i].toLowerCase();
+    }else {
+    words[i] = words[i].toUpperCase();
+    }
+  }
+  return words;
+}
+
+console.log(numbers);
+console.log(processArray(numbers));
+console.log(words);
+console.log(formatArrayStrings(words, numbers));
